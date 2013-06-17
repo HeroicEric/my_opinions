@@ -7,6 +7,6 @@ class Racecar < ActiveRecord::Base
   validates_presence_of :top_speed
 
   has_many :likes,
-    inverse_of: :racecar,
+    as: :likeable,
     dependent: :destroy
 end

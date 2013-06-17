@@ -5,7 +5,9 @@ MyOpinions::Application.routes.draw do
     resources :likes, only: [:create]
   end
 
-  resources :beers, only: [:show]
+  resources :beers, only: [:show] do
+    resources :likes, only: [:create]
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

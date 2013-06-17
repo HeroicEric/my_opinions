@@ -3,3 +3,7 @@
   <li>Price: <%= @beer.price %></li>
   <li>Style: <%= @beer.style %></li>
 </ul>
+
+<%= simple_form_for [@beer, @like] do |f| %>
+  <%= f.button :submit %>
+<%- end -%>
