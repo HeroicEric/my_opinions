@@ -4,3 +4,7 @@
   <li><%= @racecar.color %></li>
   <li><%= @racecar.crash_test_rating %></li>
 </ul>
+
+<%= simple_form_for [@racecar, @like] do |f| %>
+  <%= f.button :submit %>
+<%- end -%>

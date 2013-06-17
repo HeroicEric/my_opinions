@@ -5,4 +5,8 @@ class Racecar < ActiveRecord::Base
   validates_presence_of :crash_test_rating
   validates_presence_of :name
   validates_presence_of :top_speed
+
+  has_many :likes,
+    inverse_of: :racecar,
+    dependent: :destroy
 end

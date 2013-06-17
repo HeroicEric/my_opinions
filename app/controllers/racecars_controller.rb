@@ -5,5 +5,6 @@ class RacecarsController < ApplicationController
 
   def show
     @racecar = Racecar.find(params[:id])
+    @like = @racecar.likes.build
   end
 end

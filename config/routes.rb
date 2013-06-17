@@ -1,7 +1,9 @@
 MyOpinions::Application.routes.draw do
   devise_for :users
 
-  resources :racecars, only: [:index, :show]
+  resources :racecars, only: [:index, :show] do
+    resources :likes, only: [:create]
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
