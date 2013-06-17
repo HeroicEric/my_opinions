@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :beer do
     price 1
-    type ""
+    style "lager"
     abv 1.5
   end
 end
