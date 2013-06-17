@@ -1,5 +1,5 @@
 MyOpinions::Application.routes.draw do
-  resources :racecars, only: [:index]
+  resources :racecars, only: [:index, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
