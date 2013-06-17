@@ -1,4 +1,6 @@
 MyOpinions::Application.routes.draw do
+  devise_for :users
+
   resources :racecars, only: [:index, :show]
 
   # The priority is based upon order of creation:
